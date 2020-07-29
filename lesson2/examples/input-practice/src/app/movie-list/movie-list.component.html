@@ -6,4 +6,5 @@
    <hr>
    <input #newMovie (keyup.enter)='addMovie(newMovie.value); newMovie.value=""' type='text' placeholder='Enter movie title here'/>
    <button (click)='addMovie(newMovie.value); newMovie.value=""'>Add</button>
+   <p id="error" *ngIf='!validMovie'>Enter a movie that's not on the list!</p>
 </div>
